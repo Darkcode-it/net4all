@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * کامپوننت صفحه لاگین
@@ -17,6 +18,8 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [loginAttempts, setLoginAttempts] = useState(0);
+
+  const navigate = useNavigate();
 
   // اعتبارسنجی ایمیل
   const validateEmail = (email) => {
@@ -231,9 +234,9 @@ const Login = () => {
                 <span className="login__checkbox-custom"></span>
                 <span className="login__checkbox-label">مرا به خاطر بسپار</span>
               </label>
-              <a href="#forgot-password" className="login__forgot-link">
+              <button type="button" className="login__forgot-link" onClick={() => navigate('/forgot-password')}>
                 فراموشی رمز عبور؟
-              </a>
+              </button>
             </div>
 
             {/* Submit Button */}
@@ -277,9 +280,9 @@ const Login = () => {
           <div className="login__footer">
             <p className="login__footer-text">
               حساب کاربری ندارید؟{' '}
-              <a href="#register" className="login__footer-link">
+              <button type="button" className="login__footer-link" onClick={() => navigate('/signup')}>
                 ثبت نام کنید
-              </a>
+              </button>
             </p>
           </div>
         </div>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Articles.module.css';
+import StudentSurvey from '../StudentSurvey/StudentSurvey'; // Added import for StudentSurvey
 
 // اعتبارسنجی URL برای جلوگیری از حملات XSS
 const isValidUrl = (url) => {
@@ -26,7 +27,8 @@ const Articles = () => {
       readingTime: "8 دقیقه",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
       pdfUrl: "#",
-      schemaType: "Article"
+      schemaType: "Article",
+      category: "Network+"
     },
     {
       id: 2,
@@ -35,7 +37,8 @@ const Articles = () => {
       readingTime: "12 دقیقه",
       image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=600&q=80",
       pdfUrl: "#",
-      schemaType: "TechArticle"
+      schemaType: "TechArticle",
+      category: "SANS"
     },
     {
       id: 3,
@@ -44,7 +47,8 @@ const Articles = () => {
       readingTime: "15 دقیقه",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
       pdfUrl: "#",
-      schemaType: "TechArticle"
+      schemaType: "TechArticle",
+      category: "Cisco (CCNA)"
     },
     {
       id: 4,
@@ -53,7 +57,8 @@ const Articles = () => {
       readingTime: "10 دقیقه",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
       pdfUrl: "#",
-      schemaType: "TechArticle"
+      schemaType: "TechArticle",
+      category: "Network+"
     },
     {
       id: 5,
@@ -62,7 +67,8 @@ const Articles = () => {
       readingTime: "18 دقیقه",
       image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
       pdfUrl: "#",
-      schemaType: "Article"
+      schemaType: "Article",
+      category: "PWK"
     },
     {
       id: 6,
@@ -71,9 +77,29 @@ const Articles = () => {
       readingTime: "14 دقیقه",
       image: "https://images.unsplash.com/photo-1461344577544-4e5dc9487184?auto=format&fit=crop&w=600&q=80",
       pdfUrl: "#",
-      schemaType: "TechArticle"
+      schemaType: "TechArticle",
+      category: "Network+"
     }
   ];
+
+  // دسته‌بندی‌ها
+  const categories = [
+    "همه",
+    "Network+",
+    "Cisco (CCNA)",
+    "MikroTik",
+    "SANS",
+    "PWK",
+    "NEW"
+  ];
+
+  // state برای دسته انتخاب‌شده
+  const [selectedCategory, setSelectedCategory] = useState("همه");
+
+  // فیلتر مقالات بر اساس دسته
+  const filteredArticles = selectedCategory === "همه"
+    ? articles
+    : articles.filter(article => article.category === selectedCategory);
 
   /**
    * مدیریت دانلود PDF با رعایت اصول امنیتی
@@ -117,9 +143,32 @@ const Articles = () => {
             مجموعه‌ای از بهترین مقالات آموزشی در حوزه شبکه و امنیت سایبری
           </p>
         </header>
-        
+        {/* منوی دسته‌بندی */}
+        <nav style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              style={{
+                padding: '0.5rem 1.2rem',
+                borderRadius: '8px',
+                border: selectedCategory === cat ? '2px solid #667eea' : '1px solid #ccc',
+                background: selectedCategory === cat ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : '#fff',
+                color: selectedCategory === cat ? '#fff' : '#2d3748',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                margin: '0.2rem',
+                minWidth: '90px',
+              }}
+            >
+              {cat}
+            </button>
+          ))}
+        </nav>
+        {/* لیست مقالات */}
         <div className={styles.articlesGrid}>
-          {articles.map((article) => (
+          {filteredArticles.map((article) => (
             <article 
               key={article.id} 
               className={`${styles.articleCard} ${isLoading ? styles.articleCardLoading : ''}`}
@@ -173,6 +222,8 @@ const Articles = () => {
           ))}
         </div>
       </div>
+      {/* 👇 اضافه کردن کامپوننت نظرسنجی دانشجوها */}
+      <StudentSurvey />
     </section>
   );
 };

@@ -78,10 +78,17 @@ const Menu = () => {
       path: "/network-plus",
       hasDropdown: true,
       dropdownItems: [
-        { title: "مبانی شبکه", path: "/network-plus/basics" },
-        { title: "پروتکل‌ها", path: "/network-plus/protocols" },
-        { title: "امنیت شبکه", path: "/network-plus/security" },
-        { title: "عیب‌یابی", path: "/network-plus/troubleshooting" },
+        { title: " درس 1   ", path: "https://v0-anwae-shbkh.vercel.app/" },
+        { title: " درس 2   ", path: "https://v0-network-protocols.vercel.app/" },
+        { title: " درس 3   ", path: "https://v0-network-topology.vercel.app/" },
+        { title: " درس 4   ", path: "https://v0-network-explanation.vercel.app/" },
+        { title: " درس 5   ", path: "https://v0-linux-terminal-design.vercel.app/" },
+        { title: " درس 6   ", path: "https://v0-network-security-threats.vercel.app/" },
+        { title: " درس 7   ", path: "https://v0-network-operations.vercel.app/" },
+        { title: " درس 8   ", path: "https://v0-network-troubleshooting.vercel.app/" },
+        { title: " درس 9   ", path: "https://cloud-chupani-network.lovable.app/" },
+     
+        
       ],
     },
     {
@@ -131,6 +138,18 @@ const Menu = () => {
         { title: "Buffer Overflow", path: "/pwk/buffer-overflow" },
         { title: "Web Application", path: "/pwk/web-app" },
         { title: "Privilege Escalation", path: "/pwk/privesc" },
+      ],
+    },
+    {
+      id: "NEW",
+      title: "NEW",
+      path: "/NEW",
+      hasDropdown: true,
+      dropdownItems: [
+        { title: " ", path: "/pwk/oscp" },
+        { title: " ", path: "/pwk/buffer-overflow" },
+        { title: " ", path: "/pwk/web-app" },
+        { title: " ", path: "/pwk/privesc" },
       ],
     },
   ]

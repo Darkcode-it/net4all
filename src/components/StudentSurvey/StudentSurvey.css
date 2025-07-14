@@ -1,0 +1,73 @@
+.student-survey-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(102, 126, 234, 0.08);
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 420px;
+  direction: rtl;
+  font-family: inherit;
+}
+
+.student-survey-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.student-survey-question {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: right;
+}
+
+.student-survey-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.student-survey-options label {
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #222;
+}
+
+.student-survey-options input[type="radio"] {
+  accent-color: #667eea;
+  margin-left: 0.5rem;
+}
+
+.student-survey-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.student-survey-submit:disabled {
+  background: #e2e8f0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.student-survey-thankyou {
+  color: #22c55e;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: bold;
+} 
