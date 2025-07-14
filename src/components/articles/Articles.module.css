@@ -1,0 +1,333 @@
+/* src/pages/Articles.module.css */
+
+/* استایل‌های پایه صفحه */
+.articlesSection {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    direction: rtl;
+  }
+  
+  .articlesContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* استایل‌های هدر */
+  .articlesHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .articlesTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .articlesSubtitle {
+    font-size: 1.1rem;
+    color: #4a5568;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* استایل‌های گرید مقالات */
+  .articlesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 900px) {
+    .articlesGrid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .articlesGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* استایل‌های کارت مقاله */
+  .articleCard {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .articleCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* استایل در حالت لودینگ */
+  .articleCardLoading .articleImage {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  /* استایل‌های بخش تصویر */
+  .articleImageContainer {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .articleImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .articleCard:hover .articleImage {
+    transform: scale(1.05);
+  }
+  
+  /* استایل‌های overlay */
+  .articleOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(102, 126, 234, 0.8) 0%,
+      rgba(118, 75, 162, 0.8) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  .articleCard:hover .articleOverlay {
+    opacity: 1;
+  }
+  
+  .readingTime {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2d3748;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .readingIcon {
+    font-size: 1rem;
+  }
+  
+  /* استایل‌های محتوای مقاله */
+  .articleContent {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .articleTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+  }
+  
+  .articleCard:hover .articleTitle {
+    color: #667eea;
+  }
+  
+  .articleSubtitle {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  /* استایل‌های دکمه‌های عمل */
+  .articleActions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .articleActionButton {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+  }
+  
+  .readMoreBtn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  }
+  
+  .readMoreBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  }
+  
+  .downloadPdfBtn {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+  }
+  
+  .downloadPdfBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+  }
+  
+  .btnIcon {
+    font-size: 1.1rem;
+  }
+  
+  /* استایل‌های رسپانسیو */
+  @media (max-width: 768px) {
+    .articlesSection {
+      padding: 2rem 0;
+    }
+    
+    .articlesContainer {
+      padding: 0 1rem;
+    }
+    
+    .articlesTitle {
+      font-size: 2rem;
+    }
+    
+    .articlesSubtitle {
+      font-size: 1rem;
+    }
+    
+    .articleImageContainer {
+      height: 180px;
+    }
+    
+    .articleContent {
+      padding: 1.25rem;
+    }
+    
+    .articleActionButton {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .articlesTitle {
+      font-size: 1.75rem;
+    }
+    
+    .articleTitle {
+      font-size: 1.15rem;
+    }
+    
+    .articleSubtitle {
+      font-size: 0.9rem;
+    }
+    
+    .articleActions {
+      flex-direction: column;
+    }
+    
+    .articleActionButton {
+      width: 100%;
+    }
+  }
+  
+  /* انیمیشن‌های ظاهر شدن کارت‌ها */
+  .articleCard {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .articleCard:nth-child(1) { animation-delay: 0.1s; }
+  .articleCard:nth-child(2) { animation-delay: 0.2s; }
+  .articleCard:nth-child(3) { animation-delay: 0.3s; }
+  .articleCard:nth-child(4) { animation-delay: 0.4s; }
+  .articleCard:nth-child(5) { animation-delay: 0.5s; }
+  .articleCard:nth-child(6) { animation-delay: 0.6s; }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* استایل‌های فوکوس برای دسترسی‌پذیری */
+  .articleActionButton:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+  }
+  
+  /* استایل‌های چاپ */
+  @media print {
+    .articlesSection {
+      background: white;
+    }
+    
+    .articleCard {
+      break-inside: avoid;
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+    
+    .articleActions {
+      display: none;
+    }
+  }
