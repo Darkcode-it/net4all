@@ -1,3 +1,10 @@
+/* حذف margin و padding پیش‌فرض */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ==========================================================================
    هدر اصلی سایت - BEM Methodology
    ========================================================================== */
@@ -301,6 +308,14 @@
     justify-content: center;
     font-size: 4rem;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  .header__avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
   
   .header__avatar-status {
@@ -516,6 +531,14 @@
       font-size: 1.5rem;
     }
   
+    .header__avatar {
+      margin-top: 90px; /* افزایش فاصله از منو (navbar) */
+      display: flex;
+      justify-content: center;
+      z-index: 2;
+      position: relative;
+    }
+  
     .header__avatar-image {
       width: 150px;
       height: 150px;
@@ -560,6 +583,10 @@
   
     .header__floating-element {
       font-size: 1.5rem;
+    }
+  
+    .header__avatar {
+      margin-top: 80px; /* افزایش فاصله برای موبایل کوچک */
     }
   }
   

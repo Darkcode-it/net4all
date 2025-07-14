@@ -71,17 +71,17 @@ const Footer = () => {
                 <Link to="/" className="footer__logo">
                   <span className="footer__logo-text">Net4All</span>
                 </Link>
-                <p className="footer__tagline">مرجع آموزش امنیت شبکه</p>
+                <p className="footer__tagline"> مرجع آموزش امنیت شبکه با زبان چوپونی </p>
               </div>
 
               <p className="footer__description">
-                پلتفرم جامع آموزش امنیت شبکه و سایبری با بیش از ۸ سال تجربه در ارائه آموزش‌های تخصصی Network+، CCNA،
-                MikroTik، SANS و PWK. ما متعهد به ارائه بهترین کیفیت آموزش هستیم.
+                پلتفرم جامع آموزش امنیت شبکه با زبان چوپونی بدونه پیچ وخم 
+                من متعهد به ارائه بهترین کیفیت آموزش هستم
               </p>
 
               {/* شبکه‌های اجتماعی */}
               <div className="footer__social">
-                <h4 className="footer__social-title">ما را دنبال کنید</h4>
+                <h4 className="footer__social-title"> من اینجاهم هستم  </h4>
                 <div className="footer__social-links">
                   <a
                     href="https://t.me/net4all"
@@ -109,7 +109,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className="footer__nav-item">
-                    <Link to="/about" className="footer__nav-link">
+                    <Link to="https://github.com/Darkcode-it" className="footer__nav-link">
                       <span className="footer__nav-icon">👨‍💻</span>
                       درباره من
                     </Link>
@@ -121,15 +121,15 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className="footer__nav-item">
-                    <Link to="/blog" className="footer__nav-link">
+                    <Link to="https://darkcode-it.github.io/whoami/" className="footer__nav-link">
                       <span className="footer__nav-icon">📝</span>
                       وبلاگ
                     </Link>
                   </li>
                   <li className="footer__nav-item">
-                    <Link to="/contact" className="footer__nav-link">
+                    <Link to="https://t.me/darkcodeit" className="footer__nav-link">
                       <span className="footer__nav-icon">📞</span>
-                      تماس با ما
+                      تماس با من
                     </Link>
                   </li>
                   <li className="footer__nav-item">
@@ -217,7 +217,7 @@ const Footer = () => {
                   <span className="footer__contact-icon">📍</span>
                   <div className="footer__contact-info">
                     <span className="footer__contact-label">آدرس:</span>
-                    <span className="footer__contact-text">تهران، ایران</span>
+                    <span className="footer__contact-text"> من بچه دهاتیم  تو کردستان زندگی میکنم</span>
                   </div>
                 </div>
 
@@ -280,7 +280,7 @@ const Footer = () => {
             {/* کپی‌رایت */}
             <div className="footer__copyright">
               <p className="footer__copyright-text">© ۲۰۲۴ Net4All. تمامی حقوق محفوظ است.</p>
-              <p className="footer__copyright-subtext">طراحی و توسعه با ❤️ توسط تیم Net4All</p>
+              <p className="footer__copyright-subtext">طراحی و توسعه با ❤️  خودم بوده  Net4All</p>
             </div>
 
             {/* لینک‌های قانونی */}

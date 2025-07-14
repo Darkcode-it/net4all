@@ -277,7 +277,11 @@
     width: 320px;
     max-width: 90vw;
     height: calc(100vh - 70px);
-    background: white;
+    background: rgba(5, 5, 5, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  position: fixed;
     flex-direction: column;
     align-items: stretch;
     gap: 0;

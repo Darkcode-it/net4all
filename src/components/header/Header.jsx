@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import myImage from "../../assets/images/my.jpg"
 import "./Header.css"
 
 /**
@@ -18,7 +19,7 @@ const Header = () => {
   /**
    * لیست تخصص‌های امنیت شبکه
    */
-  const specialties = ["امنیت شبکه", "تست نفوذ", "تحلیل آسیب‌پذیری", "پاسخ به حوادث", "امنیت سایبری"]
+  const specialties = ["امنیت شبکه", " ", "تحلیل آسیب‌پذیری", "پاسخ به حوادث", "امنیت سایبری"]
 
   /**
    * فعال‌سازی انیمیشن هنگام بارگذاری
@@ -76,7 +77,7 @@ const Header = () => {
             </div>
 
             <h1 className="header__title">
-              <span className="header__title-main">مرجع آموزش</span>
+              <span className="header__title-main"> آموزش شبکه با زبان  چوپونی</span>
               <span className="header__title-highlight">
                 {specialties[currentSpecialty]}
                 <span className="header__title-cursor">|</span>
@@ -84,17 +85,29 @@ const Header = () => {
             </h1>
 
             <p className="header__description">
-              سلام! من <strong>رسولی</strong> هستم با تجربه ۴ سال در حوزه امنیت و شبکه و همچنین برنامه‌نویسی فرانت‌اند سایبری. در این پلتفرم، تجربیات و دانش خود را در زمینه‌های <span className="header__highlight-text">Network+، CCNA، MikroTik، SANS و PWK</span> با شما به اشتراک می‌گذارم.
+
+              سلام! من <strong>رسولی</strong>
+              هستم با تجربه ۴ سال در حوزه امنیت و شبکه همچنین برنامه‌نویسی فرانت‌اند
+              در این پلتفرم، تجربیات و دانش خودم را در این زمینه با زبان ساده و بدونه پیچ و خم  با شما به اشتراک می‌گذارم
             </p>
+            <span className="header__highlight-text">Network+
+              ▼
+              Cisco (CCNA)
+              ▼
+              MikroTik
+              ▼
+              SANS
+              ▼
+              PWK</span>
 
             <div className="header__features">
               <div className="header__feature">
                 <span className="header__feature-icon">📚</span>
-                <span className="header__feature-text">آموزش‌های کاربردی و پروژه‌محور</span>
+                <span className="header__feature-text">آموزش‌های کاربردی </span>
               </div>
               <div className="header__feature">
                 <span className="header__feature-icon">🏆</span>
-                <span className="header__feature-text">مدارک معتبر بین‌المللی</span>
+                <span className="header__feature-text">مدارک معتبر بین‌المللی خودم ندارم تا به توبدم</span>
               </div>
               <div className="header__feature">
                 <span className="header__feature-icon">🔧</span>
@@ -139,7 +152,7 @@ const Header = () => {
           <div className="header__visual">
             <div className="header__avatar">
               <div className="header__avatar-image">
-                <span className="header__avatar-placeholder">👨‍💻</span>
+                <img src={myImage} alt="رسولی - متخصص امنیت شبکه" className="header__avatar-img" />
               </div>
               <div className="header__avatar-status">
                 <span className="header__status-dot"></span>
