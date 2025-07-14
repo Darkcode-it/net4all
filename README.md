@@ -458,9 +458,9 @@ SOFTWARE.
 ## 📞 تماس | Contact
 
 - **🌐 وب‌سایت | Website**: [Net4All](https://darkcode-it.github.io/net4all)
-- **📧 ایمیل | Email**: [info@darkcode-it.com](mailto:info@darkcode-it.com)
+- **📧 ایمیل | Email**: [darkcodeit@gmail.com)](mailto:darkcodeit@gmail.com)
 - **🐙 GitHub**: [@darkcode-it](https://github.com/darkcode-it)
-- **💼 LinkedIn**: [Dark Code IT](https://linkedin.com/company/darkcode-it)
+
 
 ---
 
