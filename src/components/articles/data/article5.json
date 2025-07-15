@@ -1,0 +1,11 @@
+{
+  "id": 5,
+  "title": "درس ۵: پروتکل‌های شبکه (Network Protocols)",
+  "excerpt": "بررسی مهم‌ترین پروتکل‌های شبکه مانند TCP, UDP, HTTP, DNS و ...",
+  "content": "# پروتکل‌های شبکه\n\n## TCP, UDP, HTTP, DNS و ...\nدر این درس با پروتکل‌های مهم شبکه و کاربردهای آن‌ها آشنا می‌شویم... (ادامه محتوا)",
+  "author": "Net 4All | الفبای شبکه",
+  "date": "2024-01-23",
+  "category": "شبکه",
+  "readTime": "13 دقیقه",
+  "image": "https://source.unsplash.com/400x250/?protocol,tcp,udp,http,dns"
+} 

@@ -4,6 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Articles.module.css';
 import StudentSurvey from '../StudentSurvey/StudentSurvey'; // Added import for StudentSurvey
 
+// داینامیک لود کردن همه مقالات از پوشه data
+const modules = import.meta.glob('./data/article*.json', { eager: true });
+const articles = Object.values(modules);
+
 // اعتبارسنجی URL برای جلوگیری از حملات XSS
 const isValidUrl = (url) => {
   try {
@@ -19,68 +23,7 @@ const Articles = () => {
   const [isLoading, setIsLoading] = useState(true);
   
   // داده‌های مقالات
-  const articles = [
-    {
-      id: 1,
-      title: "مبانی شبکه‌های کامپیوتری",
-      subtitle: "آشنایی با مفاهیم اولیه شبکه و پروتکل‌های ارتباطی",
-      readingTime: "8 دقیقه",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
-      pdfUrl: "#",
-      schemaType: "Article",
-      category: "Network+"
-    },
-    {
-      id: 2,
-      title: "امنیت شبکه و تهدیدات سایبری",
-      subtitle: "بررسی انواع حملات و روش‌های محافظت از شبکه",
-      readingTime: "12 دقیقه",
-      image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=600&q=80",
-      pdfUrl: "#",
-      schemaType: "TechArticle",
-      category: "SANS"
-    },
-    {
-      id: 3,
-      title: "پیکربندی روترهای سیسکو",
-      subtitle: "آموزش جامع پیکربندی و مدیریت روترهای Cisco",
-      readingTime: "15 دقیقه",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
-      pdfUrl: "#",
-      schemaType: "TechArticle",
-      category: "Cisco (CCNA)"
-    },
-    {
-      id: 4,
-      title: "شبکه‌های بی‌سیم و امنیت WiFi",
-      subtitle: "راه‌اندازی و امن‌سازی شبکه‌های بی‌سیم",
-      readingTime: "10 دقیقه",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-      pdfUrl: "#",
-      schemaType: "TechArticle",
-      category: "Network+"
-    },
-    {
-      id: 5,
-      title: "تست نفوذ و ارزیابی امنیتی",
-      subtitle: "مفاهیم و تکنیک‌های تست نفوذ شبکه",
-      readingTime: "18 دقیقه",
-      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-      pdfUrl: "#",
-      schemaType: "Article",
-      category: "PWK"
-    },
-    {
-      id: 6,
-      title: "مدیریت ترافیک شبکه",
-      subtitle: "بهینه‌سازی و کنترل ترافیک شبکه‌های سازمانی",
-      readingTime: "14 دقیقه",
-      image: "https://images.unsplash.com/photo-1461344577544-4e5dc9487184?auto=format&fit=crop&w=600&q=80",
-      pdfUrl: "#",
-      schemaType: "TechArticle",
-      category: "Network+"
-    }
-  ];
+  // const articles = [article1]; // حذف ایمپورت تکی مقاله
 
   // دسته‌بندی‌ها
   const categories = [

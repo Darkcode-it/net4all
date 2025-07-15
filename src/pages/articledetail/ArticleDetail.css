@@ -198,8 +198,463 @@
 /* Article Body */
 .article-body {
   margin: 2rem 0;
-  line-height: 1.8;
+}
+
+/* Network Article Specific Styles */
+.network-intro {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.network-intro h2 {
+  color: white !important;
+  margin-bottom: 1rem;
+}
+
+/* IP Addressing Styles */
+.ip-concepts, .ip-classes, .subnetting-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.concept, .class-card, .benefit {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.concept:hover, .class-card:hover, .benefit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Routing & Switching Styles */
+.routing-concepts, .protocol-cards, .switching-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.protocol-card, .switching-type {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.protocol-card:hover, .switching-type:hover {
+  transform: scale(1.05);
+}
+
+/* Wireless Networking Styles */
+.standard-cards, .security-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.standard-card, .security-method {
+  background: #fff;
+  border: 2px solid #e9ecef;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.standard-card:hover, .security-method:hover {
+  border-color: #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* Network Management Styles */
+.function-cards, .tool-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.function-card, .tool-card {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.function-card:hover, .tool-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Network Virtualization Styles */
+.concept-cards, .sdn-components, .cloud-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.concept-card, .component, .cloud-type {
+  background: #fff;
+  border: 2px solid #e9ecef;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.concept-card:hover, .component:hover, .cloud-type:hover {
+  border-color: #764ba2;
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.2);
+  transform: translateY(-3px);
+}
+
+.network-types-section,
+.media-types-section,
+.architecture-section,
+.access-section,
+.topology-section,
+.special-networks-section,
+.internet-section,
+.data-journey-section,
+.addresses-section,
+.router-switch-section {
+  margin: 2rem 0;
+}
+
+.network-types-section h2,
+.media-types-section h2,
+.architecture-section h2,
+.access-section h2,
+.topology-section h2,
+.special-networks-section h2,
+.internet-section h2,
+.data-journey-section h2,
+.addresses-section h2,
+.router-switch-section h2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.network-card,
+.media-card,
+.arch-card,
+.access-card,
+.topology-card,
+.special-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.network-card:hover,
+.media-card:hover,
+.arch-card:hover,
+.access-card:hover,
+.topology-card:hover,
+.special-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.network-card h3,
+.media-card h3,
+.arch-card h3,
+.access-card h3,
+.topology-card h3,
+.special-card h3 {
   color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.network-card p,
+.media-card p,
+.arch-card p,
+.access-card p,
+.topology-card p,
+.special-card p {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.internet-explanation {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.internet-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #48bb78;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(72, 187, 120, 0.3);
+}
+
+.step-card h4 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.journey-explanation {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.journey-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ed8936;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(237, 137, 54, 0.3);
+}
+
+.journey-card h4 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.tech-details {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-family: 'Courier New', monospace;
+}
+
+.timing-note {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.address-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.address-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.address-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.address-card h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.address-card h4 {
+  color: #4a5568;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.example-box {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+.address-card ul {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.address-card li {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.arp-explanation {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.device-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.device-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ed8936;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.device-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(237, 137, 54, 0.3);
+}
+
+.device-card h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.device-card h4 {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.device-details {
+  text-align: right;
+}
+
+.device-details > div {
+  margin-bottom: 1.5rem;
+}
+
+.device-details strong {
+  color: #2d3748;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.device-details p {
+  color: #4a5568;
+  margin: 0;
+}
+
+.collaboration-example {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.example-list {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.example-list p {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.important-note {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.conclusion {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.conclusion h2 {
+  color: white !important;
+  margin-bottom: 1rem;
+}
+
+.conclusion p {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .article-body h2 {
