@@ -97,11 +97,14 @@ const Menu = () => {
       path: "/cisco",
       hasDropdown: true,
       dropdownItems: [
-        { title: "CCNA 200-301", path: "/cisco/ccna-200-301" },
-        { title: "Switching", path: "/cisco/switching" },
-        { title: "Routing", path: "/cisco/routing" },
-        { title: "VLAN", path: "/cisco/vlan" },
-        { title: "آزمایشگاه", path: "/cisco/lab" },
+        { title: "مفاهیم پایه شبکه", path: "/cisco/ccna-200-301" },
+        { title: "زیرساخت شبکه", path: "/cisco/switching" },
+        { title: "اتصالات اینترنتی", path: "/cisco/routing" },
+        { title: "سرویسھا", path: "/cisco/vlan" },
+        { title: "امنیت پایە", path: "/cisco/lab" },
+        { title: " اتوماسیون و برنامه نویسی شبکه", path: "/cisco/lab" },
+        { title: " عیب یابی شبکە", path: "/cisco/lab" },
+
       ],
     },
     {
