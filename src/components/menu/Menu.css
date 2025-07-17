@@ -449,3 +449,130 @@
     background: #e2e8f0;
   }
 }
+
+
+/* __________________________________________________ */
+
+
+
+/* src/components/menu/MainMenu.module.css */
+
+/* استایل‌های پایه هدر */
+.header {
+  /* استایل‌های قبلی... */
+}
+
+/* استایل‌های جدید برای بخش کاربر */
+
+.profileContainer {
+  position: relative;
+}
+
+.profileButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.profileButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.userName {
+  font-weight: 500;
+  color: #c9d1d9;
+}
+
+/* منوی پروفایل */
+.profileDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  z-index: 1000;
+  overflow: hidden;
+  margin-top: 0.8rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.profileName {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.profileEmail {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.profileMenu {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  color: #2d3748;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.profileLink:hover {
+  background-color: #f7fafc;
+}
+
+.profileIcon {
+  margin-left: 0.8rem;
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.logoutButton {
+  color: #e53e3e;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+}

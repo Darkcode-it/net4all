@@ -98,6 +98,9 @@ const Login = () => {
       // موفقیت در ورود
       alert('ورود موفقیت‌آمیز بود!');
       
+      // بعد از ورود موفق، می‌توانید از `useNavigate` استفاده کنید:
+      navigate("/panel");
+
     } catch (error) {
       setLoginAttempts(prev => prev + 1);
       setErrors({ general: 'خطا در ورود. لطفاً دوباره تلاش کنید.' });

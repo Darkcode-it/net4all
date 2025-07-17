@@ -121,7 +121,7 @@ const Header = () => {
                 <span className="header__btn-icon">🚀</span>
                 شروع یادگیری
               </button>
-              <Link to="/about" className="header__btn header__btn--secondary">
+              <Link to="https://darkcode-it.github.io/whoami/" className="header__btn header__btn--secondary">
                 <span className="header__btn-icon">👨‍💻</span>
                 درباره من
               </Link>

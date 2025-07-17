@@ -119,16 +119,35 @@ const Articles = () => {
               itemType={`http://schema.org/${article.schemaType}`}
             >
               <div className={styles.articleImageContainer}>
-                <img 
-                  src={article.image} 
-                  alt={`تصویر مقاله ${article.title}`}
-                  className={styles.articleImage}
-                  loading="lazy"
-                  onLoad={() => setIsLoading(false)}
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/400x250/667eea/ffffff?text=مقاله+آموزشی';
-                  }}
-                />
+                {article.image ? (
+                  <img 
+                    src={article.image} 
+                    alt={`تصویر مقاله ${article.title}`}
+                    className={styles.articleImage}
+                    loading="lazy"
+                    onLoad={() => setIsLoading(false)}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                ) : (
+                  <div 
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      background: '#667eea',
+                      color: '#fff',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: 18,
+                      borderRadius: 8,
+                      minHeight: '120px',
+                    }}
+                  >
+                    بدون عکس
+                  </div>
+                )}
                 <div className={styles.articleOverlay}>
                   <div className={styles.readingTime}>
                     <span className={styles.readingIcon} aria-hidden="true">⏱️</span>

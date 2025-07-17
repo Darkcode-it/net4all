@@ -97,7 +97,7 @@ const Menu = () => {
       path: "/cisco",
       hasDropdown: true,
       dropdownItems: [
-        { title: "مفاهیم پایه شبکه", path: "/cisco/ccna-200-301" },
+        { title: "مفاهیم پایه شبکه", path: "https://net4all-hi151on.gamma.site/" },
         { title: "زیرساخت شبکه", path: "/cisco/switching" },
         { title: "اتصالات اینترنتی", path: "/cisco/routing" },
         { title: "سرویسھا", path: "/cisco/vlan" },

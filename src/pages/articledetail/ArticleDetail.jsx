@@ -7,6 +7,8 @@ const ArticleDetail = () => {
   const navigate = useNavigate();
   const [article, setArticle] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isSaved, setIsSaved] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
 
   // داده‌های مقالات (در حالت واقعی از API دریافت می‌شود)
   const articlesData = [
@@ -1417,6 +1419,15 @@ R1(config-router)# network 192.168.1.0 0.0.0.255 area 0</code></pre>
     fetchArticle();
   }, [id]);
 
+  useEffect(() => {
+    if (article) {
+      const saved = JSON.parse(localStorage.getItem('savedArticles') || '[]');
+      setIsSaved(saved.includes(article.id));
+      const liked = JSON.parse(localStorage.getItem('likedArticles') || '[]');
+      setIsLiked(liked.includes(article.id));
+    }
+  }, [article]);
+
   const handleDownload = () => {
     if (article?.pdfUrl) {
       window.open(article.pdfUrl, '_blank');
@@ -1425,6 +1436,32 @@ R1(config-router)# network 192.168.1.0 0.0.0.255 area 0</code></pre>
 
   const handleBack = () => {
     navigate('/');
+  };
+
+  const handleToggleSave = () => {
+    if (!article) return;
+    let saved = JSON.parse(localStorage.getItem('savedArticles') || '[]');
+    if (saved.includes(article.id)) {
+      saved = saved.filter(id => id !== article.id);
+      setIsSaved(false);
+    } else {
+      saved.push(article.id);
+      setIsSaved(true);
+    }
+    localStorage.setItem('savedArticles', JSON.stringify(saved));
+  };
+
+  const handleToggleLike = () => {
+    if (!article) return;
+    let liked = JSON.parse(localStorage.getItem('likedArticles') || '[]');
+    if (liked.includes(article.id)) {
+      liked = liked.filter(id => id !== article.id);
+      setIsLiked(false);
+    } else {
+      liked.push(article.id);
+      setIsLiked(true);
+    }
+    localStorage.setItem('likedArticles', JSON.stringify(liked));
   };
 
   if (loading) {
@@ -1504,7 +1541,68 @@ R1(config-router)# network 192.168.1.0 0.0.0.255 area 0</code></pre>
               <span className="btn-icon">📄</span>
               دانلود نسخه PDF
             </button>
-            
+            <button
+              onClick={handleToggleSave}
+              className="save-article-btn"
+              aria-pressed={isSaved}
+              style={{
+                background: isSaved
+                  ? 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)'
+                  : 'linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%)',
+                color: isSaved ? '#d97706' : '#2d3748',
+                boxShadow: isSaved
+                  ? '0 4px 15px rgba(253, 160, 133, 0.3)'
+                  : '0 4px 15px rgba(203, 213, 225, 0.3)',
+                border: 'none',
+                borderRadius: '12px',
+                fontWeight: 600,
+                fontSize: '1rem',
+                padding: '1rem 2rem',
+                minWidth: '180px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.3s',
+              }}
+            >
+              <span className="btn-icon" aria-hidden="true">
+                {isSaved ? '★' : '☆'}
+              </span>
+              ذخیره علاقمندی
+            </button>
+            <button
+              onClick={handleToggleLike}
+              className="like-article-btn"
+              aria-pressed={isLiked}
+              style={{
+                background: isLiked
+                  ? 'linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)'
+                  : 'linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%)',
+                color: isLiked ? '#e53e3e' : '#2d3748',
+                boxShadow: isLiked
+                  ? '0 4px 15px rgba(255, 117, 140, 0.3)'
+                  : '0 4px 15px rgba(203, 213, 225, 0.3)',
+                border: 'none',
+                borderRadius: '12px',
+                fontWeight: 600,
+                fontSize: '1rem',
+                padding: '1rem 2rem',
+                minWidth: '180px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.3s',
+              }}
+            >
+              <span className="btn-icon" aria-hidden="true">
+                {isLiked ? '❤️' : '🤍'}
+              </span>
+              پسندیدم
+            </button>
             <button onClick={handleBack} className="back-to-articles-btn">
               <span className="btn-icon">📚</span>
               بازگشت به مقالات

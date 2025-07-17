@@ -5,6 +5,7 @@ import Login from './pages/login/Login';
 import ArticleDetail from './pages/articledetail/ArticleDetail';
 import ForgetPassword from './pages/forgetpassword/ForgetPassword';
 import SignUp from './pages/signup/SignUp';
+import Panel from './pages/panel/Panel';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/article/:id" element={<ArticleDetail />} />
         <Route path="/forgot-password" element={<ForgetPassword />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/panel" element={<Panel />} />
         {/* مسیرهای دیگه */}
       </Routes>
     </Router>
