@@ -1,0 +1,42 @@
+{
+    "short_name": "Net4All",
+    "name": "Net4All - آموزش شبکه و امنیت",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "logo192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "logo512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "maskable_icon.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#667eea",
+    "background_color": "#ffffff",
+    "description": "پلتفرم آموزشی شبکه و امنیت سایبری",
+    "lang": "fa-IR",
+    "orientation": "portrait",
+    "scope": "/",
+    "dir": "rtl",
+    "related_applications": [
+      {
+        "platform": "webapp",
+        "url": "https://net4all.ir/manifest.json"
+      }
+    ]
+  }
