@@ -98,10 +98,10 @@ const Menu = () => {
       hasDropdown: true,
       dropdownItems: [
         { title: "مفاهیم پایه شبکه", path: "https://net4all-hi151on.gamma.site/" },
-        { title: "زیرساخت شبکه", path: "/cisco/switching" },
-        { title: "اتصالات اینترنتی", path: "/cisco/routing" },
-        { title: "سرویسھا", path: "/cisco/vlan" },
-        { title: "امنیت پایە", path: "/cisco/lab" },
+        { title: "زیرساخت شبکه", path: "https://dars-cisco-nm6hrg4.gamma.site/" },
+        { title: "اتصالات اینترنتی", path: "https://shabakeh-ba-zabane-chopo-hj4f5bt.gamma.site/" },
+        { title: "سرویسھا", path: "https://v0-iranian-customer-support.vercel.app/" },
+        { title: "امنیت پایە", path: "https://v0-syskw-amnyt.vercel.app/" },
         { title: " اتوماسیون و برنامه نویسی شبکه", path: "/cisco/lab" },
         { title: " عیب یابی شبکە", path: "/cisco/lab" },
 

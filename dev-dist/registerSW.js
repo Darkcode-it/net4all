@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/net4all/dev-sw.js?dev-sw', { scope: '/net4all/', type: 'classic' })

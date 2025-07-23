@@ -7,8 +7,8 @@ import Articles from "../components/articles/Articles";
 const Home = () => {
     return (
         <div>
-            <Header />
             <Menu />
+            <Header />
             <Articles />
             <Footer />
         </div>

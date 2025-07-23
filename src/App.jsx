@@ -6,6 +6,7 @@ import ArticleDetail from './pages/articledetail/ArticleDetail';
 import ForgetPassword from './pages/forgetpassword/ForgetPassword';
 import SignUp from './pages/signup/SignUp';
 import Panel from './pages/panel/Panel';
+import PWAInstallPrompt from './components/PWAInstallPrompt/PWAInstallPrompt';
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
         <Route path="/panel" element={<Panel />} />
         {/* مسیرهای دیگه */}
       </Routes>
+
+          <PWAInstallPrompt />
     </Router>
   );
 };
