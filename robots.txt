@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://net4all.ir/sitemap.xml
