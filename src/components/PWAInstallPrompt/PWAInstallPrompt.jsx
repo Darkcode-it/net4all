@@ -10,9 +10,22 @@ const PWAInstallPrompt = () => {
 
   useEffect(() => {
     const handler = (e) => {
-      console.log('beforeinstallprompt event fired');
+      e.preventDefault(); // Prevent default mini-infobar
       setDeferredPrompt(e);
       setIsVisible(true);
+      // Auto-trigger the prompt immediately
+      setTimeout(() => {
+        e.prompt();
+        e.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the install prompt (auto)');
+          } else {
+            console.log('User dismissed the install prompt (auto)');
+          }
+          setDeferredPrompt(null);
+          setIsVisible(false);
+        });
+      }, 100); // slight delay to ensure UI is ready
     };
 
     window.addEventListener('beforeinstallprompt', handler);
@@ -36,6 +49,8 @@ const PWAInstallPrompt = () => {
   };
 
   if (!isVisible) return null;
+
+  const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
 
   return (
     <div className={styles.installPrompt}>

@@ -118,7 +118,7 @@ const Articles = () => {
               itemScope
               itemType={`http://schema.org/${article.schemaType}`}
             >
-              <div className={styles.articleImageContainer}>
+              {/* <div className={styles.articleImageContainer}>
                 {article.image ? (
                   <img 
                     src={article.image} 
@@ -154,7 +154,7 @@ const Articles = () => {
                     {article.readingTime}
                   </div>
                 </div>
-              </div>
+              </div> */}
               
               <div className={styles.articleContent}>
                 <h2 className={styles.articleTitle} itemProp="headline">{article.title}</h2>

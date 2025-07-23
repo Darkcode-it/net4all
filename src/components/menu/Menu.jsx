@@ -74,7 +74,7 @@ const Menu = () => {
   const menuItems = [
     {
       id: "network-plus",
-      title: "Network+",
+      title: "+Network",
       path: "/network-plus",
       hasDropdown: true,
       dropdownItems: [

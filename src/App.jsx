@@ -7,6 +7,7 @@ import ForgetPassword from './pages/forgetpassword/ForgetPassword';
 import SignUp from './pages/signup/SignUp';
 import Panel from './pages/panel/Panel';
 import PWAInstallPrompt from './components/PWAInstallPrompt/PWAInstallPrompt';
+import './index.css';
 
 const App = () => {
   return (
