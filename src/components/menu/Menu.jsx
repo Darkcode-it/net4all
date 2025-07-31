@@ -102,8 +102,8 @@ const Menu = () => {
         { title: "اتصالات اینترنتی", path: "https://shabakeh-ba-zabane-chopo-hj4f5bt.gamma.site/" },
         { title: "سرویسھا", path: "https://v0-iranian-customer-support.vercel.app/" },
         { title: "امنیت پایە", path: "https://v0-syskw-amnyt.vercel.app/" },
-        { title: " اتوماسیون و برنامه نویسی شبکه", path: "/cisco/lab" },
-        { title: " عیب یابی شبکە", path: "/cisco/lab" },
+        { title: " اتوماسیون و برنامه نویسی شبکه", path: "https://v0-network-automation.vercel.app/" },
+        { title: " عیب یابی شبکە", path: "https://v0-network-troubleshooting-pw.vercel.app/" },
 
       ],
     },
