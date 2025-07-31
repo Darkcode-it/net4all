@@ -1,11 +1,7 @@
-@font-face {
-  font-family: 'IRANYekanMedium';
-  src: url('./assets/fonts/IRANYekanMedium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
-  font-family: 'IRANYekanMedium', sans-serif;
+  font-family: 'Tanha', 'IRANYekanMedium', sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: right;
 }

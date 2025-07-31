@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import './styles/fonts.css'
 
 // برای رفع خطای 404 در محیط توسعه
 if (import.meta.env.DEV) {

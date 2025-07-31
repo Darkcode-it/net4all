@@ -1,0 +1,79 @@
+/* فونت‌های فارسی پروژه */
+
+/* فونت IRANYekanMedium */
+@font-face {
+  font-family: 'IRANYekanMedium';
+  src: url('../assets/fonts/IRANYekanMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت Tanha اصلی */
+@font-face {
+  font-family: 'Tanha';
+  src: url('../assets/fonts/Tanha.woff2') format('woff2'),
+       url('../assets/fonts/Tanha.woff') format('woff'),
+       url('../assets/fonts/Tanha.ttf') format('truetype'),
+       url('../assets/fonts/Tanha.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت Tanha بدون لاتین */
+@font-face {
+  font-family: 'Tanha-WOL';
+  src: url('../assets/fonts/Without-Latin/Tanha-WOL.woff2') format('woff2'),
+       url('../assets/fonts/Without-Latin/Tanha-WOL.woff') format('woff'),
+       url('../assets/fonts/Without-Latin/Tanha-WOL.ttf') format('truetype'),
+       url('../assets/fonts/Without-Latin/Tanha-WOL.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت Tanha با ارقام فارسی */
+@font-face {
+  font-family: 'Tanha-FD';
+  src: url('../assets/fonts/Farsi-Digits/Tanha-FD.woff2') format('woff2'),
+       url('../assets/fonts/Farsi-Digits/Tanha-FD.woff') format('woff'),
+       url('../assets/fonts/Farsi-Digits/Tanha-FD.ttf') format('truetype'),
+       url('../assets/fonts/Farsi-Digits/Tanha-FD.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت Tanha با ارقام فارسی و بدون لاتین */
+@font-face {
+  font-family: 'Tanha-FD-WOL';
+  src: url('../assets/fonts/Farsi-Digits-Without-Latin/Tanha-FD-WOL.woff2') format('woff2'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Tanha-FD-WOL.woff') format('woff'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Tanha-FD-WOL.ttf') format('truetype'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Tanha-FD-WOL.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* کلاس‌های کمکی برای استفاده از فونت‌های مختلف */
+.font-tanha {
+  font-family: 'Tanha', sans-serif;
+}
+
+.font-tanha-wol {
+  font-family: 'Tanha-WOL', sans-serif;
+}
+
+.font-tanha-fd {
+  font-family: 'Tanha-FD', sans-serif;
+}
+
+.font-tanha-fd-wol {
+  font-family: 'Tanha-FD-WOL', sans-serif;
+}
+
+.font-iranyekan {
+  font-family: 'IRANYekanMedium', sans-serif;
+} 
