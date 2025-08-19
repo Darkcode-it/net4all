@@ -86,8 +86,8 @@ const Header = () => {
 
             <p className="header__description">
 
-              سلام! من <strong>رسولی</strong>
-              هستم با تجربه ۴ سال در حوزه امنیت و شبکه همچنین برنامه‌نویسی 
+              سلام! من <strong> رسولی</strong>
+              هستم متخصص در امنیت و شبکه 
               در این پلتفرم، تجربیات و دانش خودم را در این زمینه با زبان ساده و بدونه پیچ و خم  با شما به اشتراک می‌گذارم
             </p>
             <span className="header__highlight-text">Network+

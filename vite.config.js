@@ -9,11 +9,12 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [
-        'favicon.ico', 
-        'apple-touch-icon.jpg', 
-        'masked-icon.svg',
-        '192.jpg',
-        '512.jpg'
+        'favicon.ico',
+        'pwa-192x192.png',
+        'pwa-512x512.png',
+        'robots.txt',
+        'sitemap.xml',
+        'offline.html'
       ],
       manifest: {
         name: 'Net4All',
@@ -29,25 +30,25 @@ export default defineConfig({
         scope: '/net4all/',
         icons: [
           {
-            src: '192.jpg',
+            src: 'pwa-192x192.png',
             sizes: '192x192',
-            type: 'image/jpg'
+            type: 'image/png'
           },
           {
-            src: '512.jpg',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
-            type: 'image/jpg'
+            type: 'image/png'
           },
           {
-            src: '512.jpg',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
-            type: 'image/jpg',
+            type: 'image/png',
             purpose: 'maskable'
           }
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,jpg,svg,json}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,json}'],
         runtimeCaching: [
           {
             urlPattern: new RegExp('^https://[^/]+/net4all/'),

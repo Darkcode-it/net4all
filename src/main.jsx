@@ -3,17 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import './styles/fonts.css'
+import { registerSW } from 'virtual:pwa-register'
 
-// برای رفع خطای 404 در محیط توسعه
-if (import.meta.env.DEV) {
-  window.addEventListener('load', () => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/net4all/sw.js', { scope: '/net4all/' })
-        .then(reg => console.log('SW registered (dev):', reg))
-        .catch(err => console.log('SW registration failed (dev):', err))
-    }
-  })
-}
+registerSW({ immediate: true })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

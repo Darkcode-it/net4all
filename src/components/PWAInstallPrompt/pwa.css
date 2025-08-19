@@ -1,34 +1,30 @@
 
 .installPrompt {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
     z-index: 1000;
-    max-width: 400px;
-    width: calc(100% - 40px);
-    animation: slideUp 0.5s ease;
+    animation: fadeIn 0.2s ease;
   }
   
-  @keyframes slideUp {
-    from {
-      transform: translateY(100px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   
   .installContent {
     background: white;
     border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-    padding: 1.2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 1.2rem 1.2rem 1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     border: 1px solid #e2e8f0;
+    width: min(90vw, 420px);
   }
   
   .installIcon {
@@ -43,26 +39,11 @@
     flex-shrink: 0;
   }
   
-  .installText {
-    flex: 1;
-  }
+  .installText { flex: 1; }
+  .installText h3 { margin: 0 0 0.3rem 0; color: #2d3748; font-size: 1.1rem; }
+  .installText p { margin: 0; color: #718096; font-size: 0.9rem; }
   
-  .installText h3 {
-    margin: 0 0 0.3rem 0;
-    color: #2d3748;
-    font-size: 1.1rem;
-  }
-  
-  .installText p {
-    margin: 0;
-    color: #718096;
-    font-size: 0.9rem;
-  }
-  
-  .installButtons {
-    display: flex;
-    gap: 0.5rem;
-  }
+  .installButtons { display: flex; gap: 0.5rem; }
   
   .installButton {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -72,13 +53,9 @@
     padding: 0.6rem 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.2s;
   }
-  
-  .installButton:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-  }
+  .installButton:hover { opacity: 0.95; transform: translateY(-1px); }
   
   .cancelButton {
     background: #f7fafc;
@@ -91,10 +68,6 @@
     justify-content: center;
     cursor: pointer;
     color: #718096;
-    transition: all 0.3s;
+    transition: all 0.2s;
   }
-  
-  .cancelButton:hover {
-    background: #edf2f7;
-    color: #e53e3e;
-  }
+  .cancelButton:hover { background: #edf2f7; color: #e53e3e; }
