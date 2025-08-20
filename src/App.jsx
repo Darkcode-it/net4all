@@ -10,8 +10,11 @@ import PWAInstallPrompt from './components/PWAInstallPrompt/PWAInstallPrompt';
 import './index.css';
 
 const App = () => {
+  // Set basename based on environment
+  const basename = import.meta.env.PROD ? '/net4all/' : '/';
+  
   return (
-    <Router basename='/net4all/'>
+    <Router basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

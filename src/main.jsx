@@ -5,7 +5,10 @@ import './index.css'
 import './styles/fonts.css'
 import { registerSW } from 'virtual:pwa-register'
 
-registerSW({ immediate: true })
+// Only register service worker in production
+if (import.meta.env.PROD) {
+  registerSW({ immediate: true })
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

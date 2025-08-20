@@ -113,8 +113,8 @@ const Menu = () => {
       path: "/mikrotik",
       hasDropdown: true,
       dropdownItems: [
-        { title: "MTCNA", path: "/mikrotik/mtcna" },
-        { title: "RouterOS", path: "/mikrotik/routeros" },
+        { title: "معرفی سیستم عامل RouterOS و معماری سخت‌افزارهای میکروتیک", path: "https://v0-mikro-tik-fundamentals.vercel.app/" },
+        { title: "سیستم‌عامل و روترها,سوئیچینگ", path: "https://v0-new-chat-nine-taupe.vercel.app/" },
         { title: "Wireless", path: "/mikrotik/wireless" },
         { title: "Firewall", path: "/mikrotik/firewall" },
       ],
